@@ -1,0 +1,60 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --primary: #2b7be4;
+  --accent: #2dd4bf;
+  --danger: #e14b4b;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+header{padding:22px 20px; text-align:center; background:linear-gradient(90deg,#fff,#f8fbff);}
+.container{max-width:1100px;margin:22px auto;padding:0 16px 40px;}
+h1{margin:0 0 6px;font-size:22px}
+h2{margin:0 0 12px;font-size:18px}
+.panel{background:var(--card);border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(20,30,50,0.06);margin-bottom:18px}
+.panel--groups .grupos{display:flex;flex-wrap:wrap;gap:10px}
+.grupos button{padding:10px 14px;border:none;background:var(--primary);color:white;border-radius:8px;cursor:pointer;transition:transform .12s}
+.grupos button:hover{transform:translateY(-2px)}
+.oculto{display:none}
+
+/* Tabla horario */
+#tablaHorario{width:100%;border-collapse:collapse;margin-top:12px}
+#tablaHorario th,#tablaHorario td{border:1px solid #e6e9ef;padding:10px;text-align:left}
+#tablaHorario th{background:var(--primary);color:#fff}
+
+/* Edición layout */
+.fila{display:flex;gap:16px;align-items:flex-start}
+.col{flex:1}
+label{display:block;margin-top:8px;margin-bottom:6px;color:var(--muted);font-size:13px}
+input[type="text"], input[type="date"], select {width:100%;padding:8px 10px;border-radius:8px;border:1px solid #dfe6f0;background:white}
+
+/* actividad item */
+.actividad-item{border:1px solid #eef2fb;background:#fff;padding:10px;margin-bottom:8px;border-radius:8px}
+.actividad-item .meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+.actividad-item .acciones{margin-top:8px}
+.btn{display:inline-block;padding:8px 10px;border-radius:8px;border:none;cursor:pointer}
+.btn--primary{background:var(--primary);color:white}
+.btn--danger{background:var(--danger);color:white}
+.btn--small{padding:6px 8px;font-size:13px;border-radius:6px;margin-left:6px}
+
+/* Charlas cards */
+.charlas-container{display:flex;gap:16px;margin-top:12px}
+.charlas-col{flex:1}
+.charlas-list{min-height:50px;padding:8px;background:#fbfdff;border-radius:8px;border:1px solid #eef4ff}
+.charla-card{display:flex;flex-direction:column;gap:6px;padding:10px;border-radius:10px;background:white;border:1px solid #e8f3ff;margin-bottom:8px}
+.charla-card.disponible{border-left:6px solid var(--primary)}
+.charla-card.impartida{border-left:6px solid var(--accent);background:#f7fffb}
+.charla-card .title{font-weight:600}
+.charla-card .meta{font-size:13px;color:var(--muted)}
+.charla-card .tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#eef9ff;color:var(--primary);display:inline-block;margin-top:6px}
+
+.footer{text-align:center;padding:16px;color:var(--muted);font-size:13px}
